@@ -1,16 +1,16 @@
 import React from 'react';
-import {ColumnStyle, DashboardPageStyle} from "../styles/DashboardStyles";
-import {Paper} from "@material-ui/core";
+import {DashboardPageStyle} from "../styles/DashboardStyles";
+import TweetColumnComponent from "./TweetColumnComponent";
 
 export const DashboardComponent = () => {
     return (
         <div style={DashboardPageStyle}>
             {/*cabinet minsters*/}
-            <Paper elevation={3} style={ColumnStyle}></Paper>
+            <TweetColumnComponent columnTitle={"Ministerial Tweets"}/>
             {/*All Dail members*/}
-            <Paper elevation={3} style={ColumnStyle}></Paper>
+            <TweetColumnComponent columnTitle={"Dáil Tweets"}/>
             {/*Seannad*/}
-            <Paper elevation={3} style={ColumnStyle}></Paper>
+            <TweetColumnComponent columnTitle={"Seannad Tweets"}/>
         </div>
     );
 };

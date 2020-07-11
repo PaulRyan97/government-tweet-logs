@@ -23,6 +23,12 @@ class StyleObject
         return this;
     }
 
+    setRotation(angle: number)
+    {
+        this.style.transform = "rotate(" + angle.toString() + "deg)";
+        return this;
+    }
+
     setMinHeight(height: string | number)
     {
         this.style.minHeight = this.toPxString(height);
@@ -47,9 +53,21 @@ class StyleObject
         return this;
     }
 
+    setAlignSelf(align: string)
+    {
+        this.style.alignSelf = align;
+        return this;
+    }
+
     setFontSize(fontSize: string | number)
     {
         this.style.fontSize = this.toPxString(fontSize);
+        return this;
+    }
+
+    setFontWeight(fontWeight: string)
+    {
+        this.style.fontWeight = fontWeight;
         return this;
     }
 
@@ -227,6 +245,12 @@ class StyleObject
     setJustifyContent(justify: string)
     {
         this.style.justifyContent = justify;
+        return this;
+    }
+
+    setTextAlign(align: string)
+    {
+        this.style.textAlign = align;
         return this;
     }
 
