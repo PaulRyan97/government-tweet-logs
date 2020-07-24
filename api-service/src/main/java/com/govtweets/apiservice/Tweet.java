@@ -4,12 +4,12 @@ public class Tweet {
 
     private final long id;
     private final String text;
-    private final int authorId;
+    private final long authorId;
     private final boolean isRetweet;
     private final boolean isReply;
     private final String creationDate;
 
-    public Tweet(long id, String text, int authorId, boolean isRetweet, boolean isReply, String creationDate) {
+    Tweet(long id, String text, long authorId, boolean isRetweet, boolean isReply, String creationDate) {
         this.id = id;
         this.text = text;
         this.authorId = authorId;
@@ -26,7 +26,7 @@ public class Tweet {
         return this.text;
     }
 
-    public int getAuthorId() {
+    public long getAuthorId() {
         return this.authorId;
     }
 

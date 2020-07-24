@@ -49,3 +49,13 @@ export default class Tweet implements ITweet
         return !this.isRetweet() && !this.isReply();
     }
 }
+
+export type TweetType =
+{
+    id: number;
+    text: string;
+    authorId: number;
+    isRT: boolean;
+    isReplyTweet: boolean;
+    creationDate: string;
+}
