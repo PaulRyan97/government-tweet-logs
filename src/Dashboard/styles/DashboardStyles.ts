@@ -13,5 +13,6 @@ export const ColumnStyle = new StyleObject()
     .setHeight("100%")
     .setWidth("30%")
     .setMargin("0px 10px")
+    .setOverflowY("scroll")
     .setBorderRadius(12)
     .getStyle();
