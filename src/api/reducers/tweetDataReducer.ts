@@ -1,6 +1,6 @@
-import {createReducer, Handler} from "../utils/createReducer";
-import {SetTweetAction, TWEET_DATA_ACTION_TYPES} from "./actions/tweetDataActions";
-import {TweetType} from "./tweets/Tweet";
+import {createReducer, Handler} from "../../utils/createReducer";
+import {SetTweetAction, TWEET_DATA_ACTION_TYPES} from "../actions/tweetDataActions";
+import {TweetType} from "../tweets/Tweet";
 
 export type tweetDataStateType = {
     cabinetTweets: Array<TweetType>
@@ -15,5 +15,5 @@ export default createReducer(tweetDataDefaultState, [
     {
         nextState.cabinetTweets = action.tweets;
         return nextState;
-    }),
+    }, true),
 ]);

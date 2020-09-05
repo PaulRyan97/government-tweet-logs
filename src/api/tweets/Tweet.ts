@@ -5,15 +5,17 @@ export default class Tweet implements ITweet
     id: number;
     text: string;
     authorId: number;
+    handle: string;
     isRT: boolean;
     isReplyTweet: boolean;
     creationDate: Date;
 
-    constructor(id: number, text: string, authorId: number, isRetweet: boolean, isReply: boolean, creationDate: Date)
+    constructor(id: number, text: string, authorId: number, handle: string, isRetweet: boolean, isReply: boolean, creationDate: Date)
     {
         this.id = id;
         this.text = text;
         this.authorId = authorId;
+        this.handle = handle;
         this.isRT = isRetweet;
         this.isReplyTweet = isReply;
         this.creationDate = creationDate;
@@ -22,6 +24,11 @@ export default class Tweet implements ITweet
     getAuthorId(): number
     {
         return this.authorId;
+    }
+
+    getHandle(): string
+    {
+        return this.handle;
     }
 
     getText(): string
@@ -55,6 +62,7 @@ export type TweetType =
     id: number;
     text: string;
     authorId: number;
+    handle: string,
     isRT: boolean;
     isReplyTweet: boolean;
     creationDate: string;

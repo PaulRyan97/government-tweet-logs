@@ -21,7 +21,7 @@ public class TwitterAPIController {
 
     private static final String TWITTER_API_REQUEST_LIST = "https://api.twitter.com/1.1/lists/statuses.json?list_id=";
 
-    private static final String TWTTTER_API_BEARER_TOKEN = "SECRET_TOKEN";
+    private static final String TWTTTER_API_BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAODKFwEAAAAA94Jlr3CAkFhiJ5IZ5qNfGd%2FsEq8%3DVOb0s5BNA54Apiz2RF4BbhRpizJXU7pMX1RisDdwr4Zd4mZj1O";
 
     @CrossOrigin
     @GetMapping("/getTweets")
@@ -45,11 +45,12 @@ public class TwitterAPIController {
             long id = rawTweet.get("id").asLong();
             String text = rawTweet.get("full_text").asText();
             long authorID = rawTweet.get("user").get("id").asLong();
+            String handle = rawTweet.get("user").get("screen_name").asText();
             boolean isRT = rawTweet.has("retweeted_status");
             boolean isReply = rawTweet.get("in_reply_to_user_id") != null;
             String date = rawTweet.get("created_at").asText();
 
-            tweets.add(new Tweet(id, text, authorID, isRT, isReply, date));
+            tweets.add(new Tweet(id, text, authorID, handle, isRT, isReply, date));
 
         }
         return tweets;

@@ -7,7 +7,7 @@ const FETCH_ENDPOINT: string = "getTweets";
 
 const LIST_IDS =
 {
-    CABINET: 1282382634925076481
+    CABINET: "1282382634925076481"
 };
 
 export const getCabinetTweets = (): Promise<Array<TweetType>> =>

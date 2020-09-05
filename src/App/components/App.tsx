@@ -6,16 +6,20 @@ import SidebarComponent from "../../Dashboard/components/SidebarComponent";
 import {connect} from "react-redux";
 import {Action, bindActionCreators, Dispatch, Store} from "redux";
 import {fetchCabinetTweets} from "../../api/actions/tweetDataActions";
+import {CabinetBioInfoType, storeCabinetBioInfo} from "../actions/appActions";
+import cabinetInfo from "../../data/Cabinet.json";
 
 type AppPropsType =
 {
-    fetchCabinetTweets: () => void
+    fetchCabinetTweets: () => void,
+    storeCabinetBioInfo: (info: Array<CabinetBioInfoType>) => void
 }
 
 export const App = (props: AppPropsType) => {
 
     useEffect(() =>
     {
+        props.storeCabinetBioInfo(cabinetInfo);
         props.fetchCabinetTweets();
     }, []);
 
@@ -29,15 +33,14 @@ export const App = (props: AppPropsType) => {
 
 const mapStateToProps = (store: Store) =>
 {
-    return {
-
-    }
+    return {}
 };
 
 const mapDispatchToProps = (dispatch: Dispatch<Action>) =>
 {
     return bindActionCreators({
-        fetchCabinetTweets: fetchCabinetTweets
+        fetchCabinetTweets: fetchCabinetTweets,
+        storeCabinetBioInfo: storeCabinetBioInfo
     }, dispatch);
 };
 
