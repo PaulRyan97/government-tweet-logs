@@ -5,14 +5,16 @@ public class Tweet {
     private final long id;
     private final String text;
     private final long authorId;
+    private final String handle;
     private final boolean isRetweet;
     private final boolean isReply;
     private final String creationDate;
 
-    Tweet(long id, String text, long authorId, boolean isRetweet, boolean isReply, String creationDate) {
+    Tweet(long id, String text, long authorId, String handle, boolean isRetweet, boolean isReply, String creationDate) {
         this.id = id;
         this.text = text;
         this.authorId = authorId;
+        this.handle = handle;
         this.isRetweet = isRetweet;
         this.isReply = isReply;
         this.creationDate = creationDate;
@@ -40,5 +42,9 @@ public class Tweet {
 
     public String getCreationDate() {
         return this.creationDate;
+    }
+
+    public String getHandle() {
+        return handle;
     }
 }

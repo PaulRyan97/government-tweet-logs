@@ -3,10 +3,13 @@ import {ColumnStyle} from "../styles/DashboardStyles";
 import {Paper} from "@material-ui/core";
 import {ColumnHeaderStyle, TwitterIconStyle} from "../styles/TweetColumnStyles";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import {TweetType} from "../../api/tweets/Tweet";
+import TweetComponent from "../../Tweet/components/TweetComponent";
 
 type TweetColumnPropsType =
 {
-    columnTitle: string
+    columnTitle: string,
+    tweets: Array<TweetType>
 }
 
 export const TweetColumnComponent = (props: TweetColumnPropsType) => {
@@ -18,6 +21,10 @@ export const TweetColumnComponent = (props: TweetColumnPropsType) => {
                     {props.columnTitle}
                     </span>
                 </div>
+                {props.tweets.map((tweet: TweetType) =>
+                {
+                    return <TweetComponent tweet={tweet}/>
+                })}
             </Paper>
     );
 };

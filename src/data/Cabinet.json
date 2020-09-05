@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Micheál Martin",
+    "cabinetRole": "Taoiseach",
+    "constituency": "Cork South Central",
+    "party": "FF",
+    "handle": "MichealMartinTD"
+  },
+  {
+    "name": "Leo Varadkar",
+    "cabinetRole": "Tánaiste",
+    "constituency": "Dublin West",
+    "party": "FG",
+    "handle": "LeoVaradkar"
+  },
+  {
+    "name": "Paschal Donohoe",
+    "cabinetRole": "Minister for Finance",
+    "constituency": "Dublin Central",
+    "party": "FG",
+    "handle": "Paschald"
+  },
+  {
+    "name": "Helen McEntee",
+    "cabinetRole": "Minister for Justice",
+    "constituency": "Meath East",
+    "party": "FG",
+    "handle": "HMcEntee"
+  },
+  {
+    "name": "Simon Coveney",
+    "cabinetRole": "Minister for Foreign Affairs / Defence",
+    "constituency": "Cork South Central",
+    "party": "FG",
+    "handle": "simoncoveney"
+  },
+  {
+    "name": "Stephen Donnelly",
+    "cabinetRole": "Minister for Health",
+    "constituency": "Wicklow",
+    "party": "FF",
+    "handle": "DonnellyStephen"
+  },
+  {
+    "name": "Norma Foley",
+    "cabinetRole": "Minister for Education",
+    "constituency": "Kerry",
+    "party": "FF",
+    "handle": "NormaFoleyTD1"
+  },
+  {
+    "name": "Michael McGrath",
+    "cabinetRole": "Minister for Public Expenditure and Reform",
+    "constituency": "Cork South Central",
+    "party": "FF",
+    "handle": "mmcgrathtd"
+  },
+  {
+    "name": "Charlie McConalogue",
+    "cabinetRole": "Minister for Agriculture and the Marine",
+    "constituency": "Donegal",
+    "party": "FF",
+    "handle": "McConalogue"
+  },
+  {
+    "name": "Darragh O'Brien",
+    "cabinetRole": "Minister for Housing, Local Government and Heritage",
+    "constituency": "Dublin Fingal",
+    "party": "FF",
+    "handle": "DarraghOBrienTD"
+  },
+  {
+    "name": "Heather Humphreys",
+    "cabinetRole": "Minister for Social Protection, Minister for Community and Rural Development and the Islands",
+    "constituency": "Cavan-Monaghan",
+    "party": "FG",
+    "handle": "HHumphreysFG"
+  },
+  {
+    "name": "Simon Harris",
+    "cabinetRole": "Minister for Further and Higher Education, Research, Innovation and Science",
+    "constituency": "Wicklow",
+    "party": "FG",
+    "handle": "SimonHarrisTD"
+  },
+  {
+    "name": "Eamon Ryan",
+    "cabinetRole": "Minister for Climate Action, Communications Networks and Transport",
+    "constituency": "Dublin Bay South",
+    "party": "GP",
+    "handle": "EamonRyan"
+  },
+  {
+    "name": "Catherine Martin",
+    "cabinetRole": "Minister for Media, Tourism, Art, Culture, Sports and the Gaeltacht",
+    "constituency": "Dublin Rathdown",
+    "party": "GP",
+    "handle": "cathmartingreen"
+  },
+  {
+    "name": "Roderic O'Gorman",
+    "cabinetRole": "Minister for Children, Disability, Equality and Integration",
+    "constituency": "Dublin West",
+    "party": "GP",
+    "handle": "rodericogorman"
+  }
+]
