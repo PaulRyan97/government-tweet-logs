@@ -39,12 +39,12 @@ public class TwitterAPIController {
 
     @CrossOrigin
     @GetMapping("/getMembers")
-    public List<UserProfile> getMembers(@RequestParam(value = "listID") String listID) throws URISyntaxException, JsonProcessingException {
+    public List<UserProfile> getMembers(@RequestParam(value = "listID") String listID, @RequestParam(value = "count") int count) throws URISyntaxException, JsonProcessingException {
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(TWTTTER_API_BEARER_TOKEN);
         HttpEntity<String> entity = new HttpEntity<>(headers);
         RestTemplate restTemplate = new RestTemplate();
-        URI url = new URI(TWITTER_API_MEMBERS_LIST + listID + "include_entities=false&skip_status=true");
+        URI url = new URI(TWITTER_API_MEMBERS_LIST + listID + "&" + count + "&include_entities=false&skip_status=true");
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 
         return createUserProfiles(response.getBody());

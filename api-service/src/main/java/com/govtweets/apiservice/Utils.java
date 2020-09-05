@@ -32,9 +32,9 @@ class Utils {
 
     static List<UserProfile> createUserProfiles(String responseString) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
-        List<JsonNode> users = mapper.readValue(responseString, new TypeReference<List<JsonNode>>(){});
+        JsonNode list = mapper.readValue(responseString, new TypeReference<JsonNode>(){});
         List<UserProfile> profiles = new ArrayList<UserProfile>();
-        for(JsonNode user : users)
+        for(JsonNode user : list.get("users"))
         {
             long id = user.get("id").asLong();
             String name = user.get("name").asText();
@@ -45,7 +45,7 @@ class Utils {
             int followingCount = user.get("friends_count").asInt();
             int tweetCount = user.get("statuses_count").asInt();
             String joinDate = user.get("created_at").asText();
-            String profileImage = user.get("profile_background_image_url_https").asText();
+            String profileImage = user.get("profile_image_url_https").asText();
 
             profiles.add(new UserProfile(id, name, handle, description, website, followerCount, followingCount, tweetCount, joinDate, profileImage));
         }
